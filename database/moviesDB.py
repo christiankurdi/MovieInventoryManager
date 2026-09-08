@@ -16,11 +16,9 @@ class Database:
         movies = cursor.fetchall()
         cursor.close()
         return movies
-        #add sql statements to get current movies and return values
 
     def getDesiredMovies(self):
         statement = "SELECT name FROM movies WHERE desired = 1"
-        print("success")
         cursor = self.connection.cursor()
         cursor.execute(statement)
         movies = cursor.fetchall()
@@ -28,27 +26,20 @@ class Database:
         return movies
 
     def addAMovie(self, name, genre, actor1, actor2, actor3, owned, desired):
-        check = 0
-        if actor1 == "":
-            actor1 = "Null"
-            check = 1
-        else:
-            actor1 = "\"" + actor1 + "\"" 
-        if actor2 == "":
-            actor2 = "Null"
-        else:
-            actor2 = "\"" + actor2 + "\"" 
-        if actor3 == "":
-            actor3 = "Null"
-        else:
-            actor3 = "\"" + actor3 + "\"" 
-        statement = f'''INSERT INTO movies (name, genre, actor1, actor2, actor3, owned, desired) 
-            VALUES
-            ("{name}", "{genre}", {actor1}, {actor2}, {actor3}, {owned}, {desired});'''
-        
         cursor = self.connection.cursor()
+
+        #Change empty strings to Null values for SQL
+        actor1 = actor1 or None
+        actor2 = actor2 or None
+        actor3 = actor3 or None
+
         try:
-            cursor.execute(statement)
+            #This format is needed to avoid SQL injection
+            cursor.execute('''INSERT INTO movies (name, genre, actor1, actor2, actor3, owned, desired) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)''',
+                (name, genre, actor1, actor2, actor3, owned, desired)
+            )
+
             self.connection.commit()
             cursor.close()
             return True
@@ -65,20 +56,15 @@ class Database:
 
     def checkMovie(self, name):
         statement = "SELECT name FROM movies WHERE name=" + f"\"{name}\""
-        print(statement)
         cursor = self.connection.cursor()
         cursor.execute(statement)
         check = cursor.fetchone()
-        print(check)
         if check:
             cursor.close()
             return True
         else:
             cursor.close()
             return False
-
-            
-        
 
 
     def closeConnection(self):
