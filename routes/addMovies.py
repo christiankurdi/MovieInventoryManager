@@ -25,6 +25,6 @@ def add_Movie():
     check = addMovie(name, genre, actor1, actor2, actor3, posession)
 
     if check:
-        return render_template('/addMovies.html')
+        return render_template('/index.html')
     else:
-        return render_template('index.html')
+        return render_template('/addMovies.html')
