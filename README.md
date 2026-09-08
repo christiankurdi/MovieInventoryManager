@@ -1,4 +1,4 @@
-<span style="font-size: 24px;"><strong>🎬 Movie Inventory 🎬</strong></span>
+<h3>🎬 Movie Inventory 🎬</h3>
 
 A Flask-based web application for managing your personal movie collection and wishlist.
 
@@ -10,7 +10,7 @@ Author: Christian Kurdi
 
 
 
-<span style="font-size: 24px;"><strong>📌 Overview 📌</strong></span>
+<h3>📌 Overview 📌</h3>
 
 Movie Inventory is a lightweight CRUD-style Flask application backed by SQLite. It provides a simple dashboard for:
 
@@ -26,7 +26,7 @@ The project is structured using Flask blueprints, service layers, and a database
 
 
 
-<span style="font-size: 24px;"><strong>🧱 Features 🧱</strong></span>
+<h3>🧱 Features 🧱</h3>
 
 ·	Current Collection
 
@@ -60,7 +60,7 @@ The project uses a clean, scalable structure:
 
 
 
-<span style="font-size: 24px;"><strong>⚙️ Tech Stack ⚙️</strong></span>
+<h3>⚙️ Tech Stack ⚙️</h3>
 
 ·	Python 3.x
 
@@ -76,7 +76,7 @@ The project uses a clean, scalable structure:
 
 
 
-<span style="font-size: 24px;"><strong>🧪 Future Improvements 🧪</strong></span>
+<h3>🧪 Future Improvements 🧪</h3>
 
 ·	Add user authentication
 
@@ -92,13 +92,13 @@ The project uses a clean, scalable structure:
 
 
 
-<span style="font-size: 24px;"><strong>📄 License 📄</strong></span>
+<h3>📄 License 📄</h3>
 
 This project is for educational and portfolio purposes.
 
 
 
-<span style="font-size: 24px;"><strong>🙌 Acknowledgements 🙌</strong></span>
+<h3>🙌 Acknowledgements 🙌</h3>
 
 Built with Flask and SQLite.
 
