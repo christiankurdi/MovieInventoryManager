@@ -27,7 +27,7 @@ class Database:
         cursor.close()
         return movies
 
-    def addMovie(self, name, genre, actor1, actor2, actor3, owned, desired):
+    def addAMovie(self, name, genre, actor1, actor2, actor3, owned, desired):
         check = 0
         if actor1 == "":
             actor1 = "Null"
