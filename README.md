@@ -1,4 +1,4 @@
-<h3>🎬 Movie Inventory 🎬</h3>
+<h3>🎬 Movie Inventory Manager 🎬</h3>
 
 A Flask-based web application for managing your personal movie collection and wishlist.
 
@@ -62,7 +62,7 @@ The project uses a clean, scalable structure:
 
 <h3>⚙️ Tech Stack ⚙️</h3>
 
-·	Python 3.x
+·	Python 3.13
 
 ·	Flask
 
@@ -95,14 +95,6 @@ The project uses a clean, scalable structure:
 <h3>📄 License 📄</h3>
 
 This project is for educational and portfolio purposes.
-
-
-
-<h3>🙌 Acknowledgements 🙌</h3>
-
-Built with Flask and SQLite.
-
-Designed as part of a personal software engineering portfolio.
 
 
 
