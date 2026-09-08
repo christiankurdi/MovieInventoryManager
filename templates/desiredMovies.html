@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!--CSS links-->
+    <link rel="stylesheet" href="static/LookandFeel.css">
+
+</head>
+
+<body>
+    <header id = "header">
+        <div class="column"><a href="/">Home</a></div>
+        <div class="column">Wanted Movies</div>
+        <div class="column" id="menu"><a href="javascript:void(0);" onclick="showMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="menu" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+            </svg></a>
+
+        </div>
+    </header>
+
+    <div id="menuOptions" style="display:none;">
+        <a href="/addMovie">Add a Movie</a>
+        <a href="/removeMovie">Remove a Movie</a>
+    </div>
+
+    <div id = "moviesList">
+        
+    </div>
+
+    <script>
+        function showMenu(){
+            const menuDiv = document.getElementById("menuOptions");
+            if (menuDiv.style.display === "block"){
+                menuDiv.style.display="none";
+            }else{
+                menuDiv.style.display="block";
+            }
+        }
+        </script>
+
+    <script src="../static/desiredMovies.js"></script>
+
+</body>

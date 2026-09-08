@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!--CSS links-->
+    <link rel="stylesheet" href="static/LookandFeel.css">
+
+    <!--PWA links-->
+    <!--<meta name="theme-color" content="#e1efe4">
+    <link rel="manifest" href="../static/manifest.json">
+    <link rel="apple-touch-icon" href="../static/images/logo.jpeg">-->
+
+    </head>
+
+    <body>
+        <header id = "header">
+            <div class="column"><a href="/">Home</a></div>
+            <div class="column">Adding A Movie :)</div>
+        
+        </header>
+
+        <form method = "POST" action="/addMovieToDB">
+            <div id="labels">
+                <label name="name">Name:</label>
+                <input type="text" name = "nameBox" placeholder="Enter Movie Name" required/>
+            </div>
+
+            <div id="genre">
+                <label name="genre">Genre:</label>
+                <select id="genreBox" name="genreBox">
+                    <option value="0">Choose A Genre</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Romance">Romance</option>
+                    <option value="SciFi">Sci-Fi</option>
+                    <option value="Action/Adventure">Action/Adventure</option>
+                    <option value="Horror">Horror</option>
+                </select>
+            </div>
+
+            <div id="actors">
+                <label name="Actors">Actors:</label>
+                <br>
+                <input type="text" name = "actor1"/>
+                <br>
+                <input type="text" name = "actor2"/>
+                <br>
+                <input type="text" name = "actor3"/>
+            </div>
+
+            <div id="posession">
+                 <input type="radio" name="posession" value=0 />Own
+                 <input type="radio" name="posession" value=1 />Want
+            </div>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
