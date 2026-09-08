@@ -30,7 +30,7 @@ def addMovie(name, genre, actor1, actor2, actor3, posession):
         want = 1
 
     connection = Database()
-    check = connection.addMovie(name, genre, actor1, actor2, actor3, own, want)
+    check = connection.addAMovie(name, genre, actor1, actor2, actor3, own, want)
     connection.closeConnection()
     return check
 
