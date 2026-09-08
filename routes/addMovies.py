@@ -14,7 +14,7 @@ def showAddMovie():
 
 
 @addMovieBP.route('/addMovieToDB', methods=['POST'])
-def addMovie():
+def add_Movie():
     name = request.form.get('nameBox')
     genre = request.form.get('genreBox')
     actor1 = request.form.get('actor1')
