@@ -1,0 +1,109 @@
+#header{
+    color: white;
+    background-color: black;
+    padding: 3%;
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center; /*centers text in center of columns*/
+    font-size: 45px;
+}
+
+.column{
+    display:inline-block;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+#buttonArea{
+    margin-top: 10%;
+    display:flex;
+    text-align:center;
+}
+
+#CurrentMovies{
+    border:2px solid black;
+    font-size: 30px;
+    margin-left: 7%;
+    margin-right: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: black;
+    color: white;
+}
+
+#DesiredMovies{
+    border:2px solid black;
+    font-size: 30px;
+    margin-left: 7%;
+    margin-right: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: black;
+    color: white;
+}
+
+#moviesList{
+    margin-top: 10px;
+    height:auto;
+    width:100%;
+    border:2px solid black;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.movieTitles{
+    margin:50px;
+    padding: 5px;
+    font-size: 35px;
+}
+
+.menu{
+    height:50px;
+    width:50px;
+}
+
+#menuOptions{
+    background-color: gray;
+    color: white;
+}
+
+#menuOptions a{
+    display: block;
+    padding: 14px 16px;
+    font-size: 30px;
+    border-bottom: 2px solid black;
+}
+
+
+form div{
+    margin: 40px;
+}
+
+input{
+    font-size: 30px;
+}
+
+#submit{
+    font-size: 30px;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+#posession{
+    font-size: 30px;
+}
+
+label{
+    font-size: 30px;
+}
+
+#genreBox{
+    font-size: 30px;
+}
+
+.home{
+    border: 2px solid white;
+}
