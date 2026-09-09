@@ -22,15 +22,19 @@
     <body>
         <header id = "header">
             <div class="column home"><a href="/">Home</a></div>
-            <div class="column">Removing A Movie :)</div>
+            <div class="column">Removing A Movie</div>
         
         </header>
 
         <form method = "POST" action="/removeFromDB">
-            <div id="labels">
-                <label name="name">Name:</label>
-                <input type="text" name = "nameBox" placeholder="Enter Movie Name" required/>
+            <div id="dropdown">
+                <label name="name">Select a movie:</label>
+                <select id="movieDropdown" name="movieDropdown">
+
+                </select>
             </div>
 
             <button type="submit" id="submit">Submit</button>
         </form>
+        <script src="../static/removeDropdown.js"></script>
+    </body>

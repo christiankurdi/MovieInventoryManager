@@ -77,6 +77,12 @@ a{
     border-bottom: 2px solid black;
 }
 
+#movieDropdown{
+    width: 400px;
+    padding: 8px;
+    font-size: 16px;
+}
+
 
 form div{
     margin: 40px;
