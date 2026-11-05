@@ -16,6 +16,7 @@ async function showCurrent(){
             const newMovieDiv = document.createElement("div");
             newMovieDiv.className= "movieTitles";
             newMovieDiv.textContent = data[i];
+            newMovieDiv.title= data[i];
             moviesBox.appendChild(newMovieDiv);
         }
     }else{
