@@ -4,24 +4,28 @@ Version: 0.1
 
 showMovieInfo();
 async function showMovieInfo(){
-    const response = await fetch('/getMovieInfo');
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const response = await fetch(`/getMovieInfo?name=${encodeURIComponent(name)}`);
     const data = await response.json();
 
     /*Populate fields in updateMovie.html with data*/
-    document.getElementByName("nameBox")[0].value = data[0];
-    document.getElementByID("genreBox").value = data[1];
-    document.getElementByName("actor1")[0].value = data[2];
-    document.getElementByName("actor2")[0].value = data[3];
-    document.getElementByName("actor3")[0].value = data[4];
+    document.getElementsByName("nameBox")[0].value = data[0][0];
+    document.getElementById("genreBox").value = data[0][1];
+    document.getElementsByName("actor1")[0].value = data[0][2];
+    document.getElementsByName("actor2")[0].value = data[0][3];
+    document.getElementsByName("actor3")[0].value = data[0][4];
 
-    let posessionValue = 1;
-    if (data[5] == 0){
-        posessionValue = 0;
-    }
+    let posessionValue = data[0][5] == 0 ? 1 : 0;//Get possesion value according to database value
+    
+    //Populate radio button
     const radios = document.getElementsByName("posession");
     for (const r of radios){
         r.checked = (r.value == posessionValue);
     }
+
+    //Update old name for update usage
+    document.getElementById("oldName").value = name;
 
     
 

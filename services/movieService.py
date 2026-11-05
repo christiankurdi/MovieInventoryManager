@@ -27,9 +27,15 @@ def getMovieInfo(name):
     return movieInfo
 
 #Method to update a movie's information
-def updateMovie(name, genre, actor1, actor2, actor3, own, want):
+def updateMovie(oldName, newName, genre, actor1, actor2, actor3, posession):
     connection = Database()
-    check = connection.updateAMovie(name, genre, actor1, actor2, actor3, own, want)
+    if posession == "0":
+        own = 1
+        want = 0
+    elif posession == "1":
+        want = 1
+        own = 0
+    check = connection.updateAMovie(oldName, newName, genre, actor1, actor2, actor3, own, want)
     connection.closeConnection()
     return check
 

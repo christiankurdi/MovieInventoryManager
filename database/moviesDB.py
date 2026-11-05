@@ -73,7 +73,7 @@ class Database:
 
     #Method to get movie info for update page
     def getMovieInfo(self, name):
-        statement = "SELECT name, genre, actor1, actor2, actor3, owned, desired WHERE name=" +f"\"{name}\""
+        statement = "SELECT name, genre, actor1, actor2, actor3, owned, desired FROM movies WHERE name=" +f"\"{name}\""
         cursor = self.connection.cursor()
         cursor.execute(statement)
         movieInfo = cursor.fetchall()
@@ -81,7 +81,7 @@ class Database:
         return movieInfo
 
     #Method to update movie info in database, still need to account for movies with the same name
-    def updateAMovie(self, name, genre, actor1, actor2, actor3, owned, desired):
+    def updateAMovie(self, oldName, newName, genre, actor1, actor2, actor3, owned, desired):
         cursor = self.connection.cursor()
 
         #Change empty strings to Null values for SQL
@@ -93,8 +93,8 @@ class Database:
             #This format is needed to avoid SQL injection
             cursor.execute('''UPDATE movies    
                                 SET name = ?, genre = ?, actor1 = ?, actor2 = ?, actor3 = ?, owned = ?, desired = ?
-                                WHERE name = ? "
-                    ''', (name, genre, actor1, actor2, actor3, owned, desired, name)
+                                WHERE name = ?
+                    ''', (newName, genre, actor1, actor2, actor3, owned, desired, oldName)
             )
         
             self.connection.commit()

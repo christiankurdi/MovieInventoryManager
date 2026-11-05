@@ -15,7 +15,7 @@ def showRemoveMovie():
 
 @removeMovieBP.route('/removeFromDB', methods=['POST'])
 def remove_Movie():
-    name = request.form.get('nameBox')
+    name = request.form.get('movieDropdown')
 
     success = removeMovie(name)
 

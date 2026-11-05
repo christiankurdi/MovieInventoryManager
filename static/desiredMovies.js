@@ -13,10 +13,12 @@ async function showCurrent(){
     if(data){
         for(let i = 0;i<data.length;i++){
             //Code to dynamically create movies in currentMovies.html
-            const newMovieDiv = document.createElement("div");
-            newMovieDiv.className= "movieTitles";
-            newMovieDiv.textContent = data[i];
-            moviesBox.appendChild(newMovieDiv);
+            const movie = document.createElement("a");
+            movie.className= "movieTitles";
+            movie.textContent = data[i];
+            movie.href= "/updateMovie?name=" + encodeURIComponent(data[i]);
+            movie.style.color="black";
+            moviesBox.appendChild(movie);
         }
     }else{
         moviesBox.textContent="Error";
