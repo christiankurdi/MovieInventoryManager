@@ -16,7 +16,7 @@ def showAddMovie():
 @updateMovieBP.route('/getMovieInfo')
 def get_Movie_Info():
     movieInfo = getMovieInfo()
-    return jsonify(movieInfo)
+    return jsonifymovieInfo
 
 
 @updateMovieBP.route('/updateMovieToDB', methods=['POST'])
